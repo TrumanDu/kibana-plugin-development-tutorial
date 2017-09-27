@@ -4,10 +4,9 @@
 ## IRC channel
 kibana 官方为大家注册了一个类似聊天室的通道，在这里大家可以获取有用咨询和交流 [Freenode Web Client](http://webchat.freenode.net/?channels=kibana).
 
-[float]
-==== Some light reading
+## Some light reading
 - Our {repo}blob/master/CONTRIBUTING.md[contributing guide] can help you get a development environment going
-- Tim Roes' excellent blog series https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/[Writing Kibana Plugins]
+- Tim Roes' excellent blog series [Writing Kibana Plugins](https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/)
 
 [float]
 ==== Videos
