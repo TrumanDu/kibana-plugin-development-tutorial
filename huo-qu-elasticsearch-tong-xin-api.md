@@ -13,4 +13,14 @@ Kibana在服务器和浏览器上公开两个客户端，以与Elasticserach进�
   adminCluster.callWithRequest(req, 'ping');
 ```
 ## 浏览器客户端
-浏览器
+浏览器客户端可以通过AngularJS services获取：
+```
+uiModules.get('kibana')
+.run(function (esAdmin, es) {
+  es.ping()
+  .then(() => esAdmin.ping())
+  .catch(err => {
+    console.log('error pinging servers');
+  });
+});
+```
