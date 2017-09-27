@@ -4,7 +4,7 @@
 
 | 类型 | 目的 |
 | :--- | :--- |
-|   **hacks** | 应包含在每个应用程序中的任何模块 |
+| **hacks** | 应包含在每个应用程序中的任何模块 |
 | **visTypes** | 注册提供商的模块`ui/registry/vis_types`。 |
 | **fieldFormats** | 注册提供商的模块`ui/registry/field_formats`。 |
 | **spyModes** | 注册提供商的模块`ui/registry/spy_modes`。 |
