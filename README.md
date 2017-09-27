@@ -1,3 +1,4 @@
-# My Awesome Book
+# Kibana Plugin Development Tutorial
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+这是一本讲述kibana插件开发教程类的书籍，写这本书的时候，还没有深入开发过kibana插件，书中难免会出现各种错误，欢迎大家指正交流！
+
