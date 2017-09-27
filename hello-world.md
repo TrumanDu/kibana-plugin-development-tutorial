@@ -17,3 +17,28 @@ npm install -g sao
 sao kibana-plugin
 ```
 tip：如果需要制定版本使用：```sao kibana-plugin@6.2.2```
+
+然后根据提示输入自定义选项，我这边运行效果如下：
+```
+PS E:\github\kibana\kibana\plugins\demo> sao kibana-plugin
+> Installing template-kibana-plugin with npm...
+? Name of your plugin? demo
+? Provide a short description this is my first kibana plugin? What Kibana version are you targeting? 5.5.1
+? Should an app component be generated? Yes
+? Should translation files be generated? Yes
+? Should an hack component be generated? Yes
+? Should a server API be generated? Yes
+Initialized empty Git repository in E:/github/kibana/kibana/plugins/demo/.git/
+> spawn-sync@1.0.15 postinstall E:\github\kibana\kibana\plugins\demo\node_modules\spawn-sync
+> node postinstall
+
+> demo@0.0.0 postinstall E:\github\kibana\kibana\plugins\demo
+> plugin-helpers postinstall
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN demo@0.0.0 No repository field.
+npm WARN demo@0.0.0 No license field.
+
+added 361 packages in 30.126s
+success Your plugin has been created, use `npm start` to run it
+```
