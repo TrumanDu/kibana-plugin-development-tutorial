@@ -3,14 +3,14 @@
 
 使用官方推荐的[模板工具](https://github.com/elastic/template-kibana-plugin/)生成
 
-1. Install SAO
+## 1. Install SAO
 ```
 npm install -g sao
 ```
-2. 创建工程目录
+## 2. 创建工程目录
 
 在kibana工程plugin 新建demo目录
-3. 生成代码
+## 3. 生成代码
 
 在demo目录下执行：
 ```
@@ -23,7 +23,8 @@ tip：如果需要制定版本使用：```sao kibana-plugin@6.2.2```
 PS E:\github\kibana\kibana\plugins\demo> sao kibana-plugin
 > Installing template-kibana-plugin with npm...
 ? Name of your plugin? demo
-? Provide a short description this is my first kibana plugin? What Kibana version are you targeting? 5.5.1
+? Provide a short description Hello World
+? What Kibana version are you targeting? 5.5.1
 ? Should an app component be generated? Yes
 ? Should translation files be generated? Yes
 ? Should an hack component be generated? Yes
@@ -42,3 +43,9 @@ npm WARN demo@0.0.0 No license field.
 added 361 packages in 30.126s
 success Your plugin has been created, use `npm start` to run it
 ```
+## 4. 运行
+
+在kibana工程目录下执行：```npm start```
+
+## 5. 效果
+![](/assets/搜狗截图20170927182812.jpg)
