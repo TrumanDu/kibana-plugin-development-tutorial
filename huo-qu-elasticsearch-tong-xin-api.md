@@ -13,3 +13,4 @@ Kibana在服务器和浏览器上公开两个客户端，以与Elasticserach进�
   adminCluster.callWithRequest(req, 'ping');
 ```
 ## 浏览器客户端
+浏览器
