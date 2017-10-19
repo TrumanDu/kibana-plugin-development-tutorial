@@ -1,4 +1,4 @@
-要开发kibana 插件，首先要在本地搭建开发环境，我这里推荐使用vs code,如果问我为什么，我先说这么火的开发工具，不用一下，怎么跟上世界开发潮流呢。
+要开发kibana 插件，首先要在本地搭建开发环境，我这里推荐使用vs code,如果问我为什么，我只想说这么火的开发工具，不用一下，怎么跟上世界开发潮流呢。
 
 ## 第一步
 
@@ -33,12 +33,10 @@ git config --global url."https://".insteadOf "git://"
 
 ```
 [url "https://"]
-	insteadOf = git://
+    insteadOf = git://
 ```
 
 两者原理一样，都是将ssh 方式转换成http方式。
-
-
 
 接下来执行
 
@@ -52,7 +50,7 @@ npm install
 npm start
 ```
 
-在浏览器中访问https://localhost:5061即可。
+在浏览器中访问[https://localhost:5061即可。](https://localhost:5061即可。)
 
 默认dev 启动方式会使用ssl,所以是https,如果需要修改的话，可以修改\kibana\src\cli\serve\serve.js文件。修改位置如下：
 
