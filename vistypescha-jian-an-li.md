@@ -12,7 +12,7 @@
 
 ## 准备
 
-首先新建项目clock
+首先新建项目 clock\(源码详见\)
 
 然后利用[模板工具](https://github.com/elastic/template-kibana-plugin/)生成项目
 
@@ -39,6 +39,128 @@
 
     added 361 packages in 32.334s
     success Your plugin has been created, use `npm start` to run it
+
+1. ### 修改index.js
+
+这个文件主要是根据kibana api 定义该插件类型，本次demo 定义插件类型为visTypes.修改内容如下：
+
+```
+export default function (kibana) {
+  return new kibana.Plugin({
+    name: 'clock',
+    uiExports: {
+      visTypes:['plugins/clock/clock']
+    }
+  });
+}
+```
+
+
+
+### 2.新增clock.js
+
+该文件根据TemplateVisType定义VisType类型，然后将该类型通过VisVisTypeProvider注册到kibana 中，同时新建一个ClockController，实现时间定时刷新。
+
+```
+function ClockProvider(Private) {
+  const VisType = Private(VisVisTypeProvider);
+  const TemplateVisType = Private(TemplateVisTypeProvider);
+  return new TemplateVisType({
+    name: 'clock',
+    title: 'My Clock',
+    icon: 'fa-clock-o',
+    category: VisType.CATEGORY.OTHER, //指定图标所在分类
+    description: 'An awesome Kibana plugin for clock',
+    requiresSearch: false, //是否从es中查询数据
+    template: ClockTemplate,
+    params: {
+      editor: EditorTemplate, // Use this HTML as an options editor for this vis
+      defaults: { // Set default values for paramters (that can be configured in the editor)
+        format: 'HH:mm:ss'
+      }
+    }
+  });
+}
+VisTypesRegistryProvider.register(ClockProvider);
+export default ClockProvider;
+```
+
+在使用kibana系统中组件时，需要将该资源导入一下，才能够使用，例如：
+
+```
+import {
+  uiModules
+} from 'ui/modules';
+import {
+  VisTypesRegistryProvider
+} from 'ui/registry/vis_types';
+import {
+  TemplateVisTypeProvider
+} from 'ui/template_vis_type/template_vis_type';
+import {
+  VisVisTypeProvider
+} from 'ui/vis/vis_type';
+```
+
+通过以下方式新增一个angular.js 的controller.
+
+```
+const module = uiModules.get('kibana/clock', ['kibana']);
+
+// Add a controller to this module
+module.controller('ClockController', function ($scope, $timeout) {
+
+  const setTime = function () {
+    $scope.time = Date.now();
+    $timeout(setTime, 1000);
+  };
+  setTime();
+
+});
+```
+
+### 3.新增页面文件
+
+clock.html 
+
+该页面显示controller中定义的时钟函数
+
+```
+<div class="clockVis" ng-controller="ClockController">
+	{{ time | date:vis.params.format }}
+</div>
+```
+
+clock.css 
+
+定义页面时钟展示样式
+
+```
+.clockVis {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #555;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+```
+
+edit.html
+
+这个页面主要是 作为visTypes组件中Edit,可视化修改中的参数配置。
+
+```
+<div class="form-group">
+	<label>Time Format</label>
+	<input type="text" ng-model="vis.params.format" class="form-control">
+</div>
+```
+
+### 4.运行
+
+在kibana 根目录下执行 npm start命令即可
 
 ## 参考
 
