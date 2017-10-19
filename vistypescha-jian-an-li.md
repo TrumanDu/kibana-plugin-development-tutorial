@@ -55,8 +55,6 @@ export default function (kibana) {
 }
 ```
 
-
-
 ### 2.新增clock.js
 
 该文件根据TemplateVisType定义VisType类型，然后将该类型通过VisVisTypeProvider注册到kibana 中，同时新建一个ClockController，实现时间定时刷新。
@@ -121,29 +119,29 @@ module.controller('ClockController', function ($scope, $timeout) {
 
 ### 3.新增页面文件
 
-clock.html 
+clock.html
 
 该页面显示controller中定义的时钟函数
 
 ```
 <div class="clockVis" ng-controller="ClockController">
-	{{ time | date:vis.params.format }}
+    {{ time | date:vis.params.format }}
 </div>
 ```
 
-clock.css 
+clock.css
 
 定义页面时钟展示样式
 
 ```
 .clockVis {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #555;
-	font-weight: bold;
-	font-size: 2.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: bold;
+    font-size: 2.5em;
 }
 ```
 
@@ -153,14 +151,16 @@ edit.html
 
 ```
 <div class="form-group">
-	<label>Time Format</label>
-	<input type="text" ng-model="vis.params.format" class="form-control">
+    <label>Time Format</label>
+    <input type="text" ng-model="vis.params.format" class="form-control">
 </div>
 ```
 
 ### 4.运行
 
-在kibana 根目录下执行 npm start命令即可
+在kibana 根目录下执行 npm start命令即可，效果如下：
+
+![](/assets/import.png)
 
 ## 参考
 
