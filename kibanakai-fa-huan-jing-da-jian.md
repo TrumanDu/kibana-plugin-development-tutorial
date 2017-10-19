@@ -26,7 +26,50 @@
 修改方式如下：
 
 ```
+git config --global url."https://".insteadOf "git://"
+```
 
+或者在.gitconfig文件中添加
+
+```
+[url "https://"]
+	insteadOf = git://
+```
+
+两者原理一样，都是将ssh 方式转换成http方式。
+
+
+
+接下来执行
+
+```
+npm install
+```
+
+执行成功以后，执行启动命令
+
+```
+npm start
+```
+
+在浏览器中访问https://localhost:5061即可。
+
+默认dev 启动方式会使用ssl,所以是https,如果需要修改的话，可以修改\kibana\src\cli\serve\serve.js文件。修改位置如下：
+
+```
+  if (opts.dev) {
+    set('env', 'development');
+    set('optimize.lazy', true);
+
+    // if (opts.ssl) {
+    //   set('server.ssl.enabled', true);
+    // }
+
+    // if (opts.ssl && !has('server.ssl.certificate') && !has('server.ssl.key')) {
+    //   set('server.ssl.certificate', DEV_SSL_CERT_PATH);
+    //   set('server.ssl.key', DEV_SSL_KEY_PATH);
+    // }
+  }
 ```
 
 
