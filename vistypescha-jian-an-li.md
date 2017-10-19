@@ -12,7 +12,7 @@
 
 ## 准备
 
-首先新建项目 clock\(源码详见\)
+首先新建项目 clock\([源码详见](https://github.com/TrumanDu/kibana_plugin/tree/master/clock)\)
 
 然后利用[模板工具](https://github.com/elastic/template-kibana-plugin/)生成项目
 
@@ -167,6 +167,4 @@ edit.html
 ## 参考
 
 [Writing Kibana 4 Plugins – Simple Visualizations](https://www.timroes.de/2015/12/02/writing-kibana-4-plugins-simple-visualizations/)
-
-
 
