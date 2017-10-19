@@ -9,5 +9,4 @@
 * [visTypes插件案例](vistypescha-jian-an-li.md)
 * app插件案例
 * chromeNavControls插件案例
-* 插件开发注意事项
 
