@@ -7,10 +7,10 @@
 
 * [LogTrail](https://github.com/sivasamyk/logtrail)
   * View, analyze, search and tail log events in realtime with a developer/sysadmin friendly interface
-* [Own Home](https://github.com/wtakase/kibana-own-home)
+* [Own Home](https://github.com/wtakase/kibana-own-home)  
   \(wtakase\) - enables multi-tenancy
 
-* [Shard Allocation](https://github.com/asileon/kibana_shard_allocation)
+* [Shard Allocation](https://github.com/asileon/kibana_shard_allocation)  
   \(asileon\) - visualize elasticsearch shard allocation
 
 ### Timelion Extensions
