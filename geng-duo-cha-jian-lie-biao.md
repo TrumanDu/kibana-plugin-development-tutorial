@@ -1,14 +1,15 @@
 ### Packs
 
 * [X-Pack](https://www.elastic.co/downloads/x-pack)
-  - security, monitoring, reporting, alerts, graph
+  * security, monitoring, reporting, alerts, graph
 
 ### Apps
 
 * [LogTrail](https://github.com/sivasamyk/logtrail)
-  - View, analyze, search and tail log events in realtime with a developer/sysadmin friendly interface
+  * View, analyze, search and tail log events in realtime with a developer/sysadmin friendly interface
 * [Own Home](https://github.com/wtakase/kibana-own-home)
   \(wtakase\) - enables multi-tenancy
+
 * [Shard Allocation](https://github.com/asileon/kibana_shard_allocation)
   \(asileon\) - visualize elasticsearch shard allocation
 
@@ -65,7 +66,7 @@
 * [Time picker as a dashboard panel](https://github.com/nreese/kibana-time-plugin)
   Widget to view and edit the time range from within dashboards.
 * [Notification Center](https://github.com/sw-jung/kibana_notification_center)
-  - for better experience of notifier toasts.
+  * for better experience of notifier toasts.
 * [Kibana-API](https://github.com/Webiks/kibana-API.git)
   \(webiks\) Exposes an API with Kibana functionality. Use it to create, edit and embed visualizations, and also to search inside an embedded dashboard.
 
