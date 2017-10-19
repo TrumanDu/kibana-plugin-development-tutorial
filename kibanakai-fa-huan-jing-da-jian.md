@@ -11,8 +11,22 @@
 ## 第三步
 
 在kibana项目根目录下执行
+
 ```
-git tag
+1. $ git tag
+2. $ git checkout 指定version
+```
+
+## 第四步
+
+这步非常重要，绝大部分无法正常启动kibana 项目，都是由于无法安装完整所有依赖，即npm install 执行过程报错。强烈建议有VPN，使用npm install，我尝试过cnpm install ,虽然执行不错，但是有部分依赖无法下载下来，造成启动失败。
+
+在公司开发的人请注意，公司防火墙可能会限制从github 中下载依赖，这块需要将所有git下载代码由ssh强制更换成http。
+
+修改方式如下：
+
+```
+
 ```
 
 
