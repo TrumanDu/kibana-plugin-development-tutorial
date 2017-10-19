@@ -166,5 +166,7 @@ edit.html
 
 ## 参考
 
+[Writing Kibana 4 Plugins – Simple Visualizations](https://www.timroes.de/2015/12/02/writing-kibana-4-plugins-simple-visualizations/)
+
 
 
