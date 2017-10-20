@@ -13,7 +13,7 @@ app插件，在插件中可以查看elasticsearch 所有的index,以及他们的
 
 然后利用[模板工具](https://github.com/elastic/template-kibana-plugin/)生成项目
 
-1. ### 修改index.js
+### 1.修改index.js
 
 这个文件主要是根据kibana api 定义该插件类型，本次demo 定义插件类型为visTypes.修改内容如下：
 
