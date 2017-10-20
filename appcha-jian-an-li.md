@@ -11,7 +11,7 @@ app插件，在插件中可以查看elasticsearch 所有的index,以及他们的
 
 ## 准备
 
-首先新建项目 clock\([源码详见](https://github.com/TrumanDu/kibana_plugin/tree/master/clock)\)
+首先新建项目 elasticsearch_status\([源码详见](https://github.com/TrumanDu/kibana_plugin/tree/master/clock)\)
 
 然后利用[模板工具](https://github.com/elastic/template-kibana-plugin/)生成项目
 
