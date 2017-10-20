@@ -170,5 +170,5 @@ detail.html
 
 ## 参考
 
-
+[Writing Kibana Plugins – Custom applications](https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/)
 
