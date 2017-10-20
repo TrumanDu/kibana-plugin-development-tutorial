@@ -161,10 +161,31 @@ edit.html
 在kibana 根目录下执行 npm start命令即可，效果如下：
 
 ![](/assets/import.png)
+![](/assets/clock.png)
 
-### ![](/assets/clock.png)5.总结
+### 5.总结
 
-### 
+visTypes插件体系，主要是对聚合数据做可视化展示的。在开发中要注意TemplateVisTypeProvider的使用。对于该类涉及参数如下：
+```
+ opts = opts || {};
+
+      this.name = opts.name;
+      this.title = opts.title;
+      this.responseConverter = opts.responseConverter;
+      this.hierarchicalData = opts.hierarchicalData || false;
+      this.icon = opts.icon;
+      this.image = opts.image;
+      this.description = opts.description;
+      this.category = opts.category || VisType.CATEGORY.OTHER;
+      this.isExperimental = opts.isExperimental;
+      this.schemas = opts.schemas || new VisTypeSchemas();
+      this.params = opts.params || {};
+      this.requiresSearch = opts.requiresSearch == null ? true : opts.requiresSearch; // Default to true unless otherwise specified
+      this.requiresTimePicker = !!opts.requiresTimePicker;
+      this.fullEditor = opts.fullEditor == null ? false : opts.fullEditor;
+      this.implementsRenderComplete = opts.implementsRenderComplete || false;
+```
+
 
 ## 参考
 
