@@ -167,7 +167,7 @@ edit.html
 
 visTypes插件体系，主要是对聚合数据做可视化展示的。在开发中要注意TemplateVisTypeProvider的使用。对于该类涉及参数如下：
 ```
- opts = opts || {};
+      opts = opts || {};
       this.name = opts.name;
       this.title = opts.title;
       this.responseConverter = opts.responseConverter;
@@ -183,6 +183,18 @@ visTypes插件体系，主要是对聚合数据做可视化展示的。在开发
       this.requiresTimePicker = !!opts.requiresTimePicker;
       this.fullEditor = opts.fullEditor == null ? false : opts.fullEditor;
       this.implementsRenderComplete = opts.implementsRenderComplete || false;
+```
+大部分参数字如其意，重点讲解一下params 与schemas，
+
+涉及分类如下：
+```
+VisType.CATEGORY = {
+    BASIC: 'basic',
+    DATA: 'data',
+    MAP: 'map',
+    OTHER: 'other',
+    TIME: 'time',
+  };
 ```
 
 
