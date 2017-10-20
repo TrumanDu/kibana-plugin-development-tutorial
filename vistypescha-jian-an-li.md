@@ -165,7 +165,22 @@ edit.html
 
 ### 5.总结
 
-visTypes插件体系，主要是对聚合数据做可视化展示的。在开发中要注意TemplateVisTypeProvider的使用。对于该类涉及参数如下：
+visTypes插件体系，主要是对聚合数据做可视化展示的。在开发中要注意TemplateVisTypeProvider的使用。
+
+涉及分类如下：
+```
+VisType.CATEGORY = {
+    BASIC: 'basic',
+    DATA: 'data',
+    MAP: 'map',
+    OTHER: 'other',
+    TIME: 'time',
+  };
+```
+
+
+
+对于该类涉及参数如下：
 ```
       opts = opts || {};
       this.name = opts.name;
@@ -185,17 +200,63 @@ visTypes插件体系，主要是对聚合数据做可视化展示的。在开发
       this.implementsRenderComplete = opts.implementsRenderComplete || false;
 ```
 大部分参数字如其意，重点讲解一下params 与schemas，
+params 是组件最上方展示参数及Editor的，
+schemas是组件左下方展示metric的。
+例如：
+```
+new TemplateVisType({
+    name: 'search-table',
+    title: 'Data Table (Searchable)',
+    image,
+    description: 'Display values in a table and an input for search items without applying filters',
+    category: VisType.CATEGORY.DATA,
+    template: SearchTablesVisTemplate,
+    params: {
+      defaults: {
+        perPage: 10,
+        showPartialRows: false,
+        showMeticsAtAllLevels: false,
+        sort: {
+          columnIndex: null,
+          direction: null
+        },
+        showTotal: false,
+        totalFunc: 'sum',
+        caseSensitive: true
+      },
+      editor: '<search-tables-vis-params></search-tables-vis-params>'
+    },
+    implementsRenderComplete: true,
+    hierarchicalData: function (vis) {
+      return Boolean(vis.params.showPartialRows || vis.params.showMeticsAtAllLevels);
+    },
+    schemas: new Schemas([
+      {
+        group: 'metrics',
+        name: 'metric',
+        title: 'Metric',
+        aggFilter: '!geo_centroid',
+        min: 1,
+        defaults: [
+          { type: 'count', schema: 'metric' }
+        ]
+      },
+      {
+        group: 'buckets',
+        name: 'bucket',
+        title: 'Split Rows'
+      },
+      {
+        group: 'buckets',
+        name: 'split',
+        title: 'Split Table'
+      }
+    ])
+  })
+```
+使用效果
 
-涉及分类如下：
-```
-VisType.CATEGORY = {
-    BASIC: 'basic',
-    DATA: 'data',
-    MAP: 'map',
-    OTHER: 'other',
-    TIME: 'time',
-  };
-```
+![](/assets/TemplateVisTypeProvider.png)
 
 
 ## 参考
