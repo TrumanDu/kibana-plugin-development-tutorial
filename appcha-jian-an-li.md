@@ -165,9 +165,6 @@ detail.html
 
 在kibana 根目录下执行 npm start命令即可，效果如下：  
 ![](/assets/elasticsearch_status.gif)
-
-### 5.总结
-
 ## 参考
 
 [Writing Kibana Plugins – Custom applications](https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/)
