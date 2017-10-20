@@ -160,7 +160,7 @@ edit.html
 
 在kibana 根目录下执行 npm start命令即可，效果如下：
 
-![](/assets/import.png)
+![](/assets/import.png)  
 ![](/assets/clock.png)
 
 ### 5.总结
@@ -168,6 +168,7 @@ edit.html
 visTypes插件体系，主要是对聚合数据做可视化展示的。在开发中要注意TemplateVisTypeProvider的使用。
 
 涉及分类如下：
+
 ```
 VisType.CATEGORY = {
     BASIC: 'basic',
@@ -178,9 +179,8 @@ VisType.CATEGORY = {
   };
 ```
 
-
-
 对于该类涉及参数如下：
+
 ```
       opts = opts || {};
       this.name = opts.name;
@@ -199,10 +199,12 @@ VisType.CATEGORY = {
       this.fullEditor = opts.fullEditor == null ? false : opts.fullEditor;
       this.implementsRenderComplete = opts.implementsRenderComplete || false;
 ```
-大部分参数字如其意，重点讲解一下params 与schemas，
-params 是组件最上方展示参数及Editor的，
-schemas是组件左下方展示metric的。
+
+大部分参数字如其意，重点讲解一下params 与schemas，  
+params 是组件最上方展示参数及Editor的，  
+schemas是组件左下方展示metric的。  
 例如：
+
 ```
 new TemplateVisType({
     name: 'search-table',
@@ -254,10 +256,10 @@ new TemplateVisType({
     ])
   })
 ```
+
 使用效果
 
-![](/assets/TemplateVisTypeProvider.png)
-
+![](/assets/TemplateVisTypeProvider.png)![](/assets/editor.jpg)
 
 ## 参考
 
