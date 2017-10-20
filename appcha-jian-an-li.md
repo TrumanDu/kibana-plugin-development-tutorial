@@ -52,7 +52,9 @@ export default function (kibana) {
 在上面代码中app{}按照kibana插件接口编写，没有什么好解释的。在init\(\){}方法可以在kibana启动的时候调用，在这里面可以做任意化的操作，这块是用作server端，提供路由查询elasticsearch功能。该方法中传入参数server,也很有用途，比较获取配置信息，创建路由等。
 
 ### 2.新增routes.js
+
 在server目录新建routes.js文件，主要是用作提供server端查询elasticsearch数据。
+
 ```
 export default function (server) {
 
@@ -85,53 +87,50 @@ export default function (server) {
   });
 
 };
-
 ```
-
 
 ### 3.新增app.js
 
-```
-const uiModules =require ('ui/modules');
-const uiRoutes =require ('ui/routes');
+    const uiModules =require ('ui/modules');
+    const uiRoutes =require ('ui/routes');
 
-require ('ui/autoload/styles');
-require ('./less/main.less');
-const overviewTemplate =require('./templates/index.html');
-const detailTemplate =require('./templates/detail.html');
+    require ('ui/autoload/styles');
+    require ('./less/main.less');
+    const overviewTemplate =require('./templates/index.html');
+    const detailTemplate =require('./templates/detail.html');
 
-uiRoutes.enable();
-uiRoutes
-.when('/', {
-  template: overviewTemplate,
-  controller: 'elasticsearchStatusController',
-  controllerAs: 'ctrl'
-})
-.when('/index/:name', {
-  template: detailTemplate,
-  controller: 'elasticsearchDetailController',
-  controllerAs: 'ctrl'
-});
+    uiRoutes.enable();
+    uiRoutes
+    .when('/', {
+      template: overviewTemplate,
+      controller: 'elasticsearchStatusController',
+      controllerAs: 'ctrl'
+    })
+    .when('/index/:name', {
+      template: detailTemplate,
+      controller: 'elasticsearchDetailController',
+      controllerAs: 'ctrl'
+    });
 
-uiModules
-.get('app/elasticsearch_status')
-.controller('elasticsearchStatusController', function ($http) {
-  $http.get('../api/elasticsearch_status/indices').then((response) => {
-    this.indices = response.data;
-  });
-})
-.controller('elasticsearchDetailController', function($routeParams, $http) {
-  this.index = $routeParams.name;
+    uiModules
+    .get('app/elasticsearch_status')
+    .controller('elasticsearchStatusController', function ($http) {
+      $http.get('../api/elasticsearch_status/indices').then((response) => {
+        this.indices = response.data;
+      });
+    })
+    .controller('elasticsearchDetailController', function($routeParams, $http) {
+      this.index = $routeParams.name;
 
-  $http.get(`../api/elasticsearch_status/index/${this.index}`).then((response) => {
-    this.status = response.data;
-  });
-});
+      $http.get(`../api/elasticsearch_status/index/${this.index}`).then((response) => {
+        this.status = response.data;
+      });
+    });
 
-```
 该文件主要是提供controller,调用后台API,在页面展示数据
 
 index.html
+
 ```
 <div class="container">
   <div class="row">
@@ -146,15 +145,17 @@ index.html
   </div>
 </div>
 ```
-显示所有index 列表
+
+显示所有index 列表  
 detail.html
+
 ```
 <div class="container">
   <div class="row">
     <div class="col-12-sm">
-			<a href="#/">Index list</a>
+            <a href="#/">Index list</a>
       <h1>Index: {{ ctrl.index }}</h1>
-			<pre>{{ ctrl.status | json }}</pre>
+            <pre>{{ ctrl.status | json }}</pre>
     </div>
   </div>
 </div>
@@ -162,10 +163,12 @@ detail.html
 
 ### 4.运行
 
-在kibana 根目录下执行 npm start命令即可，效果如下：
+在kibana 根目录下执行 npm start命令即可，效果如下：  
 ![](/assets/elasticsearch_status.gif)
+
 ### 5.总结
 
 ## 参考
+
 
 
