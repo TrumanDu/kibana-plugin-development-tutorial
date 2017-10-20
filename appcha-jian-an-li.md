@@ -15,7 +15,7 @@ app插件，在插件中可以查看elasticsearch 所有的index,以及他们的
 
 ### 1.修改index.js
 
-这个文件主要是根据kibana api 定义该插件类型，本次demo 定义插件类型为visTypes.修改内容如下：
+这个文件主要是根据kibana api 定义该插件类型，本次demo 定义插件类型为app.修改内容如下：
 
 ```
 
