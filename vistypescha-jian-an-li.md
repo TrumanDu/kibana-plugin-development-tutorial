@@ -168,7 +168,6 @@ edit.html
 visTypes插件体系，主要是对聚合数据做可视化展示的。在开发中要注意TemplateVisTypeProvider的使用。对于该类涉及参数如下：
 ```
  opts = opts || {};
-
       this.name = opts.name;
       this.title = opts.title;
       this.responseConverter = opts.responseConverter;
