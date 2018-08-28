@@ -40,3 +40,9 @@ git config --global url."https://".insteadOf "git://"
 
 以上改动是5.5.1版本需要做的，从6.x版本，kibana官方更新了包管理方式，使用了yarn,使用后的感觉是这个超级棒，值得推荐！
 
+1. 安装yarn  
+
+```
+npm install  --g yarn@1.6
+```
+

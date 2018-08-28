@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](README.md)
-* [插件开发注意事项](cha-jian-kai-fa-zhu-yi-shi-xiang.md)
+* [注意事项](cha-jian-kai-fa-zhu-yi-shi-xiang.md)
 * [kibana开发环境搭建](kibanakai-fa-huan-jing-da-jian.md)
 * [Hello World](hello-world.md)
 * [UI导出](uidao-chu.md)
