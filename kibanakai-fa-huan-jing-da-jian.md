@@ -52,6 +52,15 @@ git config --global url."https://".insteadOf "git://"
 3. 运行
 
     ```yarn start```
+    
+    
+## vs code 搭配开发技巧
+
+关于vs code强大我就不介绍了，这不是本文的重点。这块主要是建议安装的一些插件：
+
+[Prettier formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+建议将其他格式化插件禁用，多个格式化插件可能格式化完还是会爆红，这个是我目前发现格式化kibana代码最好的插件
 
 
 
