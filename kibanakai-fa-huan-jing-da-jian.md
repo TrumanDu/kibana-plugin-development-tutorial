@@ -60,8 +60,9 @@ git config --global url."https://".insteadOf "git://"
 
 [Prettier formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
-建议将其他格式化插件禁用，多个格式化插件可能格式化完还是会爆红，这个是我目前发现格式化kibana代码最好的插件
+建议将**其他格式化插件禁用**，多个格式化插件可能格式化完还是会爆红，这个是我目前发现格式化kibana代码最好的插件
 
+关于
 
 
 ## 参考
