@@ -13,7 +13,8 @@
 案例一下 [博客](http://trumandu.github.io/)，欢迎follower,欢迎交流！
 
 
-
+如果本书对你开发有帮助，欢迎给作者加鸡腿！
+![](http://trumandu.github.io/images/wechatpay.jpg)
 
 推荐一下目前我开发的kibana插件：
 1. [indices_view](https://github.com/TrumanDu/indices_view)
