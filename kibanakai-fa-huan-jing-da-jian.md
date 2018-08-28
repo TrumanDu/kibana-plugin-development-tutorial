@@ -43,6 +43,6 @@ git config --global url."https://".insteadOf "git://"
 1. 安装yarn  
 
 ```
-npm install  --g yarn@1.6
+npm install  -g yarn@1.6
 ```
 
