@@ -43,6 +43,7 @@ git config --global url."https://".insteadOf "git://"
 1. 安装yarn  
 
     ```npm install  -g yarn@1.6```
+    
     **注意：**我这里安装的是1.6版本，yarn最新版本已经是1.7，使用该版本无法工作，暂未追究原因，这块需要注意。
     
 2. 下载依赖  
