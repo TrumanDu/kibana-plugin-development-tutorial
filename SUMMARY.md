@@ -9,6 +9,5 @@
 * [与ElasticSearch通信API](huo-qu-elasticsearch-tong-xin-api.md)
 * [visTypes插件案例](vistypescha-jian-an-li.md)
 * [app插件案例](appcha-jian-an-li.md)
-* [chromeNavControls插件案例](chromenavcontrolscha-jian-an-li.md)
 * [更多插件列表](geng-duo-cha-jian-lie-biao.md)
 
