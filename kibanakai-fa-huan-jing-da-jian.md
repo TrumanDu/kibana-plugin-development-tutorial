@@ -62,7 +62,7 @@ git config --global url."https://".insteadOf "git://"
 
 建议将**其他格式化插件禁用**，多个格式化插件可能格式化完还是会爆红，这个是我目前发现格式化kibana代码最好的插件
 
-关于
+关于debug,目前版本还无法配置，有看到官方提到在7.x版本，就可以在vscode 中配置debug了。具体如何配置参考vscode debug教程。（如果有人现在知道的话，欢迎帮忙添加）
 
 
 ## 参考
