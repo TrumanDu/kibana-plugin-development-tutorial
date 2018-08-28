@@ -54,7 +54,7 @@ git config --global url."https://".insteadOf "git://"
     ```yarn start```
     
     
-## vs code 搭配开发技巧
+## VS Code 搭配开发技巧
 
 关于vs code强大我就不介绍了，这不是本文的重点。这块主要是建议安装的一些插件：
 
