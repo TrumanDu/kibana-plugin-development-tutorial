@@ -58,7 +58,9 @@ git config --global url."https://".insteadOf "git://"
 
 关于vs code强大我就不介绍了，这不是本文的重点。这块主要是建议安装的一些插件：
 
-[Prettier formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+1. [Prettier formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+2. [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+
 
 建议将**其他格式化插件禁用**，多个格式化插件可能格式化完还是会爆红，这个是我目前发现格式化kibana代码最好的插件
 
