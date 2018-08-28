@@ -6,28 +6,14 @@
 
 经过半年的开发，有太多新的东西分享给你大家，一个是kibana新版本api的改变，一个是对开发过程中涉及的东西做个系统的完善。
 
+> 这是目前kibana最详细开发教程，没有之一！
+
 案例一下 [博客](http://trumandu.github.io/)，欢迎follower,欢迎交流！
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-推荐一下
+推荐一下目前我开发的kibana插件：
+1. [indices_view](https://github.com/TrumanDu/indices_view)
+2. [bmap](https://github.com/TrumanDu/bmap)
 
