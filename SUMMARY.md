@@ -13,10 +13,13 @@
 * [visTypes插件案例](vistypescha-jian-an-li.md)
 * [app插件案例](appcha-jian-an-li.md)
 
-## API详解
+## 高级进阶
 
 * [UI导出](uidao-chu.md)
 * [与ElasticSearch通信API](huo-qu-elasticsearch-tong-xin-api.md)
+* [自定义配置](zi-ding-yi-pei-zhi.md)
+* [前后端通信](qian-hou-duan-tong-xin.md)
+* [EUI使用](euishi-yong.md)
 
 ## 尾章
 
