@@ -11,4 +11,4 @@
 
   ```server.log(['error', 'cleaner'], 'delete  index unsuccessful .', response);```
   
-  中期第一个参数是log级别，第二个参数是plugin名称。
+  期中第一个参数是log级别，第二个参数是plugin名称。
