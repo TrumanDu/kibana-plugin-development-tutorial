@@ -20,6 +20,7 @@
 * [自定义配置](zi-ding-yi-pei-zhi.md)
 * [前后端通信](qian-hou-duan-tong-xin.md)
 * [EUI使用](euishi-yong.md)
+* [Server端log使用](serverduan-log-shi-yong.md)
 
 ## 尾章
 
