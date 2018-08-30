@@ -7,3 +7,5 @@ init(server, options) {
      const url = config.get('elasticsearch.url');
     }
 ```
+
+## 自定义配置
