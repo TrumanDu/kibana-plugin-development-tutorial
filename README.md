@@ -20,7 +20,7 @@
 2. [bmap](https://github.com/TrumanDu/bmap)
 3. [cleaner]()
 
-如果本书对你开发有帮助，欢迎给作者加鸡腿！
+如果本书对你开发有帮助，欢迎给作者加鸡腿！！！！
 
 ![](/assets/wechatpay.jpg)
 
