@@ -21,6 +21,8 @@
 * [前后端通信](qian-hou-duan-tong-xin.md)
 * [EUI使用](euishi-yong.md)
 * [Server端log使用](serverduan-log-shi-yong.md)
+* [Angularjs架构插件开发](angularjsjia-gou-cha-jian-kai-fa.md)
+* [React架构插件开发](reactjia-gou-cha-jian-kai-fa.md)
 
 ## 尾章
 
