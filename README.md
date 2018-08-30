@@ -16,8 +16,11 @@
 
 
 推荐一下目前我开发的kibana插件：
+
 1. [indices_view](https://github.com/TrumanDu/indices_view)
+
 2. [bmap](https://github.com/TrumanDu/bmap)
+
 3. [cleaner]()
 
 如果本书对你开发有帮助，欢迎给作者加鸡腿！！！！
