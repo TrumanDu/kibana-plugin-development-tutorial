@@ -12,7 +12,7 @@
 
 案例一下 [博客](http://trumandu.github.io/)，欢迎follower,欢迎交流！
 
-![](/assets/fork-me-github.png)
+[![](/assets/fork-me-github.png)](https://github.com/TrumanDu)
 
 
 推荐一下目前我开发的kibana插件：
@@ -21,7 +21,7 @@
 
 2. [bmap](https://github.com/TrumanDu/bmap)
 
-3. [cleaner]()
+3. [cleaner](https://github.com/TrumanDu/cleaner)
 
 如果本书对你开发有帮助，欢迎给作者加鸡腿！！！！
 
