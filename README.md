@@ -12,7 +12,7 @@
 
 案例一下 [博客](http://trumandu.github.io/)，欢迎follower,欢迎交流！
 
-
+![](https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png)
 
 
 推荐一下目前我开发的kibana插件：
