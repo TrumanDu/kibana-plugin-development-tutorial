@@ -40,7 +40,7 @@
     added 361 packages in 32.334s
     success Your plugin has been created, use `npm start` to run it
 
-1. ### 修改index.js
+### 1. 修改index.js
 
 这个文件主要是根据kibana api 定义该插件类型，本次demo 定义插件类型为visTypes.修改内容如下：
 
