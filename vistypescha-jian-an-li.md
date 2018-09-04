@@ -60,27 +60,34 @@ export default function (kibana) {
 该文件根据TemplateVisType定义VisType类型，然后将该类型通过VisVisTypeProvider注册到kibana 中，同时新建一个ClockController，实现时间定时刷新。
 
 ```
-function ClockProvider(Private) {
-  const VisType = Private(VisVisTypeProvider);
-  const TemplateVisType = Private(TemplateVisTypeProvider);
-  return new TemplateVisType({
+const ClockProvider = Private=>{
+  const VisFactory = Private(VisFactoryProvider);
+
+  return VisFactory.createAngularVisualization({
     name: 'clock',
     title: 'My Clock',
     icon: 'fa-clock-o',
-    category: VisType.CATEGORY.OTHER, //指定图标所在分类
+    category: CATEGORY.OTHER, //指定图标所在分类
     description: 'An awesome Kibana plugin for clock',
-    requiresSearch: false, //是否从es中查询数据
-    template: ClockTemplate,
-    params: {
-      editor: EditorTemplate, // Use this HTML as an options editor for this vis
-      defaults: { // Set default values for paramters (that can be configured in the editor)
+    visConfig: {
+      defaults: {
         format: 'HH:mm:ss'
-      }
-    }
+      },
+      template: ClockTemplate,
+    },
+    editorConfig: {
+      optionsTemplate: EditorTemplate,
+    },
+    requestHandler: 'none',
+    responseHandler: 'none',
+    options: {
+      showIndexSelection: false,
+      showQueryBar: false,
+      showFilterBar: false,
+    },
   });
-}
+};
 VisTypesRegistryProvider.register(ClockProvider);
-export default ClockProvider;
 ```
 
 在使用kibana系统中组件时，需要将该资源导入一下，才能够使用，例如：
@@ -89,15 +96,13 @@ export default ClockProvider;
 import {
   uiModules
 } from 'ui/modules';
-import {
-  VisTypesRegistryProvider
-} from 'ui/registry/vis_types';
-import {
-  TemplateVisTypeProvider
-} from 'ui/template_vis_type/template_vis_type';
-import {
-  VisVisTypeProvider
-} from 'ui/vis/vis_type';
+import { VisFactoryProvider } from 'ui/vis/vis_factory';
+import { VisTypesRegistryProvider } from 'ui/registry/vis_types';
+import { CATEGORY } from 'ui/vis/vis_category';
+
+import ClockTemplate from './clock.html';
+import EditorTemplate from './edit.html';
+import './clock.css';
 ```
 
 通过以下方式新增一个angular.js 的controller.
@@ -159,8 +164,8 @@ edit.html
 ### 4.运行
 
 在kibana 根目录下执行 npm start命令即可，效果如下：
+![](/assets/category_clock.png)
 
-![](/assets/import.png)  
 ![](/assets/clock.png)
 
 ### 5.总结
