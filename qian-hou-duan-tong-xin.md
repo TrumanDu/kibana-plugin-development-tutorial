@@ -33,3 +33,7 @@ export default function (server) {
       });
 ```
 ## react
+使用axios实现http通信
+```
+import axios from 'axios';
+```
