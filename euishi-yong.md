@@ -9,5 +9,20 @@ Elastic UI框架（[EUI](https://github.com/elastic/eui)）是Elastic使用的�
   下载自己需要的版本，然后执行```yarn && yarn start```
 
 ## 使用
-
+```
+import {
+  EuiPage,
+  EuiPageBody,
+  EuiPageContent,
+  EuiPageContentBody,
+  EuiPageContentHeader,
+  EuiPageContentHeaderSection,
+  EuiTitle,
+  EuiFlexGroup,
+  EuiFlexItem,
+  EuiText,
+  EuiSpacer,
+} from '@elastic/eui';
+import 'ui/autoload/styles';
+```
 ## 效果
