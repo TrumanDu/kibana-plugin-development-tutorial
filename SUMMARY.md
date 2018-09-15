@@ -23,6 +23,7 @@
 * [Server端log使用](serverduan-log-shi-yong.md)
 * [Angularjs架构插件开发](angularjsjia-gou-cha-jian-kai-fa.md)
 * [React架构插件开发](reactjia-gou-cha-jian-kai-fa.md)
+* visTypes高级进阶
 
 ## 尾章
 
