@@ -9,7 +9,7 @@
       // Add server routes and initialize the plugin here
       serverRoute(server, options);
   });
-  ```
+```
 ### 构建路由
 
 
