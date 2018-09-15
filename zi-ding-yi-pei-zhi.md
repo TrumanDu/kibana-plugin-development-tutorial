@@ -9,3 +9,17 @@ init(server, options) {
 ```
 
 ## 自定义配置
+
+### 1.配置校验与默认值
+
+在index.js new kibana.Plugin中可以传入config方法，如下：
+```
+    config(Joi) {
+      return Joi.object({
+        enabled: Joi.boolean().default(true),
+        scheduleTime: Joi.number().default(60),
+        mergePattern: Joi.string().default('[^a-z]+$'),
+      }).default();
+    },
+```
+这里使用的Joi,通过它可以设置配置参数的数据类型，以及默认值。
