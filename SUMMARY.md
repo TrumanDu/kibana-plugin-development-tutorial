@@ -15,7 +15,7 @@
 
 ## 高级进阶
 
-* [UI导出](uidao-chu.md)
+* [UI Exports](uidao-chu.md)
 * [与ElasticSearch通信API](huo-qu-elasticsearch-tong-xin-api.md)
 * [自定义配置](zi-ding-yi-pei-zhi.md)
 * [前后端通信](qian-hou-duan-tong-xin.md)
@@ -23,7 +23,7 @@
 * [Server端log使用](serverduan-log-shi-yong.md)
 * [Angularjs架构插件开发](angularjsjia-gou-cha-jian-kai-fa.md)
 * [React架构插件开发](reactjia-gou-cha-jian-kai-fa.md)
-* visTypes高级进阶
+* [visTypes高级进阶](vistypesgao-ji-jin-jie.md)
 
 ## 尾章
 

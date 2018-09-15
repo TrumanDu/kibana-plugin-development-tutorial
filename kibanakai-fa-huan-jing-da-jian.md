@@ -6,7 +6,7 @@
 
 ## 第二步
 
-下载 kibana 源代码，在[github](https://github.com/elastic/kibana)下下载即可。
+下载 kibana 源代码，在[github](https://github.com/elastic/kibana)下载即可。
 
 ## 第三步
 
