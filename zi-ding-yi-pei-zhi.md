@@ -46,3 +46,9 @@ export default function (kibana) {
 }
 ```
 ### 3.前端获取参数
+
+
+```
+import chrome from 'ui/chrome';
+const mergePattern = chrome.getInjected('mergePattern');
+```
