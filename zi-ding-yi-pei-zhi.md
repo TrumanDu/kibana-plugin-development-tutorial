@@ -45,3 +45,4 @@ export default function (kibana) {
   });
 }
 ```
+### 3.前端获取参数
