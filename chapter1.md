@@ -9,7 +9,7 @@ kibana 官方为大家注册了一个类似聊天室的通道，在这里大家�
 ## 文章
 
 * [contributing guide](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md)
-* Tim Roes' 博客[Writing Kibana Plugins](https://www.timroes.de/2016/02/21/writing-kibana-plugins-custom-applications/)\(强烈推荐阅读\)
+* [kibana-plugin-notes](https://github.com/nreese/kibana-plugin-notes)\(强烈推荐阅读\)
 
 ## 视频
 
