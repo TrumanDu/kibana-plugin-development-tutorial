@@ -26,3 +26,4 @@ import {
 import 'ui/autoload/styles';
 ```
 ## 效果
+![](/assets/eui.png)
