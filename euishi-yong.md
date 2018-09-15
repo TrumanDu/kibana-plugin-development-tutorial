@@ -3,6 +3,6 @@ Elastic UI框架（[EUI](https://github.com/elastic/eui)）是Elastic使用的�
 
 
 ## 文档查看
-- 查看官方文档
+- 查看[官方文档](https://elastic.github.io/eui/#/)
 - 自己下载代码，根据不同版本生成不同文档
 ## 使用
