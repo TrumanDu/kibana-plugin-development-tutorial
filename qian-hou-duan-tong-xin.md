@@ -3,7 +3,16 @@
 ## server端
 在index.js初始化server端代码
 ### 初始化
+```
+    import serverRoute from './server/routes/server';
+    init(server, options) {
+      // Add server routes and initialize the plugin here
+      serverRoute(server, options);
+  });
+  ```
 ### 构建路由
+
+
 ## angularjs
 
 ## react
