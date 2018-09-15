@@ -12,3 +12,16 @@
   ```server.log(['error', 'cleaner'], 'delete  index unsuccessful .', response);```
   
   期中第一个参数是log级别，第二个参数是plugin名称。
+  
+  
+  ## log配置
+  kibana 的log 配置都是在kibana.yml中配置的，这里仅说明如何显示自定义级别的log,更详细信息，详见[官网](https://www.elastic.co/guide/en/kibana/current/settings.html)
+
+对于自定义级别的log可以通过```logging.events.response: ["error"]```
+
+
+
+
+
+## 参考
+1. [kibana-docker-log-issue](https://discuss.elastic.co/t/kibana-docker-log-issue/147647)
