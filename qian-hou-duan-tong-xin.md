@@ -25,5 +25,11 @@ export default function (server) {
 ```
 
 ## angularjs
-
+```
+   $http
+      .get('../api/indices_view/_stats')
+      .then((response) => {
+          console.log(response);
+      });
+```
 ## react
