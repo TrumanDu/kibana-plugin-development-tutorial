@@ -22,4 +22,4 @@ init(server, options) {
       }).default();
     },
 ```
-这里使用的Joi,通过它可以设置配置参数的数据类型，以及默认值。
+这里使用的Joi,通过它可以设置配置参数的数据类型，以及默认值。参数默认格式是[pluginName].enabled等。
