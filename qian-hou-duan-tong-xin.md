@@ -36,4 +36,5 @@ export default function (server) {
 使用axios实现http通信
 ```
 import axios from 'axios';
+const { data } = await axios('../api/cleaner/_stats');
 ```
