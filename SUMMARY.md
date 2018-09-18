@@ -12,6 +12,7 @@
 * [Hello World](hello-world.md)
 * [visTypes插件案例](vistypescha-jian-an-li.md)
 * [app插件案例](appcha-jian-an-li.md)
+* [模板工具](mo-ban-gong-ju.md)
 
 ## 高级进阶
 
