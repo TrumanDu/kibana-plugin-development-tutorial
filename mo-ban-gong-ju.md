@@ -5,4 +5,4 @@
 
 ## 参考
 1. [template-kibana-plugin](https://github.com/elastic/template-kibana-plugin)
-2. []()
+2. [kbn-plugin-generator](https://github.com/elastic/kibana/tree/master/packages/kbn-plugin-generator#quick-start)
