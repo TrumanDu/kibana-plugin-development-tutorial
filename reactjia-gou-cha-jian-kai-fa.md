@@ -1,7 +1,7 @@
 ## 实践
 在本篇实现一个app 插件demo,在demo页面可以显示服务器端时间。
 ### 插件入口
-在 在该文件中定义插件名，描述，以及插件前端和后端入口，配置。
+在该文件中定义插件名，描述，以及插件前端和后端入口，配置。
 ```
 export default function (kibana) {
   return new kibana.Plugin({
