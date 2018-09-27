@@ -31,6 +31,106 @@ export default function (kibana) {
 ```
 ### 插件前端
 
+首先编写react 组件，展示页面
+```
+import React from 'react';
+import {
+  EuiPage,
+  EuiPageHeader,
+  EuiTitle,
+  EuiPageBody,
+  EuiPageContent,
+  EuiPageContentHeader,
+  EuiPageContentBody,
+  EuiText
+} from '@elastic/eui';
+
+export class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+    /*
+       FOR EXAMPLE PURPOSES ONLY.  There are much better ways to
+       manage state and update your UI than this.
+    */
+    const { httpClient } = this.props;
+    httpClient.get('../api/Demo/example').then((resp) => {
+      this.setState({ time: resp.data.time });
+    });
+  }
+  render() {
+    const { title } = this.props;
+    return (
+      <EuiPage>
+        <EuiPageBody>
+          <EuiPageHeader>
+            <EuiTitle size="l">
+              <h1>{title} Hello World!</h1>
+            </EuiTitle>
+          </EuiPageHeader>
+          <EuiPageContent>
+            <EuiPageContentHeader>
+              <EuiTitle>
+                <h2>Congratulations</h2>
+              </EuiTitle>
+            </EuiPageContentHeader>
+            <EuiPageContentBody>
+              <EuiText>
+                <h3>You have successfully created your first Kibana Plugin!</h3>
+                <p>The server time (via API call) is {this.state.time || 'NO API CALL YET'}</p>
+              </EuiText>
+            </EuiPageContentBody>
+          </EuiPageContent>
+        </EuiPageBody>
+      </EuiPage>
+    );
+  }
+}
+
+```
+
+将组件挂载到页面上
+```
+import React from 'react';
+import { uiModules } from 'ui/modules';
+import chrome from 'ui/chrome';
+import { render, unmountComponentAtNode } from 'react-dom';
+
+import 'ui/autoload/styles';
+import './less/main.less';
+import { Main } from './components/main';
+
+const app = uiModules.get('apps/demo');
+
+app.config($locationProvider => {
+  $locationProvider.html5Mode({
+    enabled: false,
+    requireBase: false,
+    rewriteLinks: false,
+  });
+});
+app.config(stateManagementConfigProvider =>
+  stateManagementConfigProvider.disable()
+);
+
+function RootController($scope, $element, $http) {
+  const domNode = $element[0];
+
+  // render react to DOM
+  render(<Main title="Demo" httpClient={$http} />, domNode);
+
+  // unmount react on controller destroy
+  $scope.$on('$destroy', () => {
+    unmountComponentAtNode(domNode);
+  });
+}
+
+chrome.setRootController('demo', RootController);
+```
+
 ### 服务端
 
 ```
