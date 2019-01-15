@@ -19,26 +19,7 @@
 
 ## 第四步
 
-~~这步非常重要，绝大部分无法正常启动kibana 项目，都是由于无法安装完整所有依赖，即npm install 执行过程报错。强烈建议有VPN，使用npm install，我尝试过cnpm install ,虽然执行不错，但是有部分依赖无法下载下来，造成启动失败。~~
-
-~~在公司开发的人请注意，公司防火墙可能会限制从github 中下载依赖，这块需要将所有git下载代码由ssh强制更换成http。~~
-~~修改方式如下：~~
-
-```
-git config --global url."https://".insteadOf "git://"
-```
-
-~~或者在.gitconfig文件中添加~~
-
-```
-[url "https://"]
-    insteadOf = git://
-```
-
-~~两者原理一样，都是将ssh 方式转换成http方式。~~
-
-
-以上改动是5.5.1版本需要做的，从6.x版本，kibana官方更新了包管理方式，使用了yarn,使用后的感觉是这个超级棒，值得推荐！
+从6.x版本，kibana官方更新了包管理方式，使用了yarn,使用后的感觉是这个超级棒，值得推荐！
 
 1. 安装yarn  
 
@@ -69,6 +50,29 @@ git config --global url."https://".insteadOf "git://"
 
 关于debug,目前版本还无法配置，有看到官方提到在7.x版本，就可以在vscode 中配置debug了。具体如何配置参考vscode debug教程。（如果有人现在知道的话，欢迎帮忙添加）
 
+
+## 不同版本环境搭建
+### 5.5.1
+这步非常重要，绝大部分无法正常启动kibana 项目，都是由于无法安装完整所有依赖，即npm install 执行过程报错。强烈建议有VPN，使用npm install，我尝试过cnpm install ,虽然执行不错，但是有部分依赖无法下载下来，造成启动失败。
+
+在公司开发的人请注意，公司防火墙可能会限制从github 中下载依赖，这块需要将所有git下载代码由ssh强制更换成http。
+修改方式如下：
+
+```
+git config --global url."https://".insteadOf "git://"
+```
+
+或者在.gitconfig文件中添加
+
+```
+[url "https://"]
+    insteadOf = git://
+```
+
+两者原理一样，都是将ssh 方式转换成http方式。
+
+
+以上改动是5.5.1版本需要做的
 
 ## 参考
 1. [setting-up-your-development-environment](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md#setting-up-your-development-environment)
