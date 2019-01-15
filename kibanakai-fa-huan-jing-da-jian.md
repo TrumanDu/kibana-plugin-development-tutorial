@@ -74,6 +74,10 @@ git config --global url."https://".insteadOf "git://"
 
 以上改动是5.5.1版本需要做的
 
+### 6.4.0
+```npm install -g yarn@1.6```
+**注意：**我这里安装的是1.6版本，yarn最新版本已经是1.7，使用该版本无法工作，暂未追究原因，这块需要注意。
+
 ## 参考
 1. [setting-up-your-development-environment](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md#setting-up-your-development-environment)
 
