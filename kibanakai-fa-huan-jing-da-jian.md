@@ -21,17 +21,22 @@
 
 从6.x版本，kibana官方更新了包管理方式，使用了yarn,使用后的感觉是这个超级棒，值得推荐！
 
-1. 安装yarn  
+1. 安装nvm
 
-    ```npm install  -g yarn@1.6```
+    Install the version of Node.js listed in the `.node-version` file. This can be automated with tools such as [nvm](https://github.com/creationix/nvm), [nvm-windows](https://github.com/coreybutler/nvm-windows) or [avn](https://github.com/wbyoung/avn). As we also include a `.nvmrc` file you can switch to the correct version when using nvm by running:
+
+    ```bash
+    nvm use
+    ```
+2. 安装yarn  
+
+    ```npm install  -g yarn```
     
-    **注意：**我这里安装的是1.6版本，yarn最新版本已经是1.7，使用该版本无法工作，暂未追究原因，这块需要注意。
-    
-2. 下载依赖  
+3. 下载依赖  
 
     ```yarn kbn bootstrap```
     
-3. 运行
+4. 运行
 
     ```yarn start```
     
