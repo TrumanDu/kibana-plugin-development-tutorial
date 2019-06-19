@@ -41,6 +41,15 @@
     ```yarn start```
     
     
+**额外话题**
+
+最近搭建最新版kibana v7.1.1,发现无法启动，现象是重复启动，经过查看文档后，发现是node存在的一个问题。
+
+解决办法如下：
+
+在下载依赖成功以后，以管理员权限在**cmd**中执行`fsutil behavior set disablelastaccess 1`,然后再执行`yarn start`即可。
+    
+    
 ## VS Code 搭配开发技巧
 
 关于vs code强大我就不介绍了，这不是本文的重点。这块主要是建议安装的一些插件：
@@ -82,7 +91,15 @@ git config --global url."https://".insteadOf "git://"
 ### 6.4.0
 ```npm install -g yarn@1.6```
 **注意：**我这里安装的是1.6版本，yarn最新版本已经是1.7，使用该版本无法工作，暂未追究原因，这块需要注意。
+### 7.1.1
+发现无法启动，现象是重复启动，经过查看文档后，发现是node存在的一个问题。
+
+解决办法如下：
+
+在下载依赖成功以后，以管理员权限在**cmd**中执行`fsutil behavior set disablelastaccess 1`,然后再执行`yarn start`即可。
 
 ## 参考
 1. [setting-up-your-development-environment](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md#setting-up-your-development-environment)
+2. [fs.watch says every single file in my folder changed, randomly ](https://github.com/nodejs/node/issues/21643)
+3. [[dev mode] Kibana regularly considers (wrongly) that all source files have changed and continuously restart](https://github.com/elastic/kibana/issues/22859)
 
